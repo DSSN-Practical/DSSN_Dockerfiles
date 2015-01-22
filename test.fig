@@ -1,0 +1,9 @@
+xodx:
+  build: xodx.docker
+  links:
+    - vos
+  ports:
+    - 8880:80  
+
+vos:
+  build: virtuoso 

@@ -1,0 +1,10 @@
+xodx:
+  build: xodx.docker
+  links:
+    - vos
+  ports:
+    - 8880:80  
+
+vos:
+  build: virtuoso
+  mem_limit: 64m
