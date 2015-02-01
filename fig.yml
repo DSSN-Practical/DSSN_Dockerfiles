@@ -1,10 +1,25 @@
-xodx:
-  build: xodx.docker
+xodx1:
+  image: 'xodx:default'
   links:
-    - vos
+    - vos1:vos
   ports:
-    - 8880:80  
+    - "8001:80"
 
-vos:
-  build: virtuoso
+vos1:
+  image: 'vos:lite-True_mem-64'
   mem_limit: 64m
+  ports:
+    - "1111"
+
+xodx2:
+  image: 'xodx:default'
+  links:
+    - vos2:vos
+  ports:
+    - "8002:80"
+
+vos2:
+  image: 'vos:lite-True_mem-64'
+  mem_limit: 64m
+  ports:
+    - "1111"
