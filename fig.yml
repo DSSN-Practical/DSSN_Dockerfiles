@@ -18,8 +18,15 @@ xodx2:
   ports:
     - "8002:80"
 
+xodx3:
+  image: 'xodx:default'
+  links:
+    - vos2:vos
+  ports:
+    - "8003:80"
+
 vos2:
-  image: 'vos:lite-True_mem-64'
-  mem_limit: 64m
+  image: 'vos:lite-True_mem-128'
+  mem_limit: 128m
   ports:
     - "1111"
