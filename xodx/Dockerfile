@@ -23,7 +23,7 @@ RUN apt-get install -y \
 RUN apt-get install -y emacs23-nox net-tools procps htop nmap virtuoso-opensource-6.1-bin
 
 # clone ontowiki and get its dependencies
-RUN git clone https://github.com/AKSW/xodx.git /var/www/
+RUN git clone https://github.com/DSSN-Practical/xodx.git /var/www/
 RUN cd /var/www/ && make install-fb
 RUN cp /var/www/config.ini-dist /var/www/config.ini
 

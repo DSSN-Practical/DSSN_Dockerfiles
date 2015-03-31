@@ -7,7 +7,7 @@ xodx1:
 
 vos1:
   image: 'vos:lite-True_mem-64'
-  mem_limit: 64m
+  mem_limit: 67m
   ports:
     - "1111"
 
@@ -26,7 +26,7 @@ xodx3:
     - "8003:80"
 
 vos2:
-  image: 'vos:lite-True_mem-128'
-  mem_limit: 128m
+  image: 'vos:lite-True_mem-100'
+  mem_limit: 105m
   ports:
     - "1111"
